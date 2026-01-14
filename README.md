@@ -1,100 +1,284 @@
-<div align="center">
-    <a href="https://www.idurarapp.com/">
-  <img src="https://avatars.githubusercontent.com/u/50052356?s=200&v=4" width="128px" />
-    </a>
-    <h1>Open Source ERP / CRM Accounting Invoice Quote</h1>
-    <p align="center">
-        <p>IDURAR ERP CRM | Simple To Use</p>
-    </p>
-    
+# IDURAR ERP/CRM
+
+**IDURAR ERP/CRM** is a modern, full-stack **Enterprise Resource Planning (ERP)** and **Customer Relationship Management (CRM)** system designed to help businesses manage finance, customers, inventory, users, and reporting from a single, unified platform.
+
+Built with a **React + Node.js + MongoDB** stack and fully containerized using  **Docker Compose** , IDURAR focuses on scalability, maintainability, and developer experience.
+
+---
+
+## 🚀 Key Capabilities
+
+* End-to-end **business management**
+* Modular and extensible architecture
+* REST-based backend API
+* Secure authentication and role-based access
+* Production-ready Docker setup
+
+---
+
+## Screenshots
+
+![1768379484197](image/README/1768379484197.png)
+
+![1768379613871](image/README/1768379613871.png)
+
+## 📌 Application Features
+
+### 1️⃣ Financial Management
+
+**Invoicing & Billing**
+
+* Create, edit, and delete invoices
+* Tax and discount calculation
+* Multi-currency support
+* PDF invoice generation
+* Email invoice delivery
+* Invoice status tracking
+
+**Payments**
+
+* Payment records and history
+* Partial payments
+* Payment receipts
+* Manual payment tracking (gateway-agnostic)
+
+**Expenses**
+
+* Expense categorization
+* Expense records
+* Financial summaries
+
+---
+
+### 2️⃣ Customer Relationship Management (CRM)
+
+* Customer profiles
+* Contact information management
+* Lead tracking
+* Sales opportunities
+* Deal pipeline
+* Quote-to-invoice workflow
+* Customer segmentation
+
+---
+
+### 3️⃣ Inventory & Products
+
+* Product catalog
+* Categories and variants
+* Stock tracking
+* Inventory valuation
+* Low-stock indicators
+* Product images
+* Stock movement history
+
+---
+
+### 4️⃣ User & Access Management
+
+* User accounts
+* Role-Based Access Control (RBAC)
+* Permission management
+* Secure JWT authentication
+* Profile management
+* Activity protection via middleware
+
+---
+
+### 5️⃣ Reporting & Analytics
+
+* Sales reports
+* Financial reports
+* Customer insights
+* Product performance analytics
+* Dashboard visualizations
+* Exportable data (PDF-ready)
+
+---
+
+### 6️⃣ Document & File Management
+
+* File uploads (invoices, receipts, assets)
+* Secure file storage
+* PDF generation
+* Document downloads
+
+---
+
+### 7️⃣ Notifications & Integrations
+
+* Email notifications (Resend)
+* AI integrations (OpenAI)
+* External service readiness
+* REST API integration support
+
+---
+
+## 🧱 Tech Stack (Verified)
+
+### Frontend
+
+| Technology       | Version | Purpose          |
+| ---------------- | ------- | ---------------- |
+| React            | 18.3.1  | UI Library       |
+| Redux Toolkit    | 2.2.1   | State Management |
+| Ant Design       | 5.14.1  | UI Components    |
+| Vite             | 5.4.8   | Build Tool       |
+| React Router DOM | 6.22.0  | Routing          |
+| Axios            | 1.6.2   | HTTP Client      |
+| dayjs            | ^1.11.x | Date Handling    |
+| react-quill      | ^2.x    | Rich Text Editor |
+
+---
+
+### Backend
+
+| Technology | Version | Purpose            |
+| ---------- | ------- | ------------------ |
+| Node.js    | 20.9.0  | Runtime            |
+| Express.js | 4.18.2  | REST API Framework |
+| MongoDB    | 6.0     | Database           |
+| Mongoose   | 8.1.1   | ODM                |
+| JWT        | 9.0.2   | Authentication     |
+| Multer     | 1.4.4   | File Uploads       |
+| OpenAI SDK | 4.27.0  | AI Services        |
+| Resend     | 2.0.0   | Email Delivery     |
+
+---
+
+### DevOps & Tooling
+
+* Docker
+* Docker Compose
+* Git & GitHub
+* Environment-based configuration
+* ESLint & Prettier
+
+---
+
+## 🗂️ Project Structure
 
 ```
- Give a Star ⭐️ & Fork to this project ... Happy coding! 🤩`
+.
+├── backend/        # Express API & business logic
+├── frontend/       # React application
+├── mongodb/        # MongoDB initialization & volumes
+├── doc/            # Documentation
+├── features/       # Feature definitions
+├── docker-compose.yml
+├── README.md
+└── LICENSE
 ```
 
-IDURAR is Open Source ERP / CRM (Invoice / Quote / Accounting ) Based on Advanced Mern Stack (Node.js / Express.js / MongoDb / React.js ) with Ant Design (AntD) and Redux
+---
 
-</div>
+## 🐳 Docker Setup (Recommended)
 
-**🚀 Self-hosted Entreprise Version** : [https://cloud.idurarapp.com](https://cloud.idurarapp.com/)
+### Prerequisites
 
+* Docker
+* Docker Compose
 
-## Features :
+### Run the Application
 
-Invoice Management
+```bash
+docker-compose up -d --build
+```
 
-Payment Management
+### Access Services
 
-Quote Management
+* Frontend: `http://localhost:3000`
+* Backend API: `http://localhost:4000`
+* MongoDB: `localhost:27017`
 
-Customer Management
+---
 
-Ant Design Framework(AntD) 🐜
+## 🧪 Local Development (Without Docker)
 
-Based on Mern Stack (Node.js / Express.js / MongoDb / React.js ) 👨‍💻
+### Backend
 
-### May i can use IDURAR for Commercial use :
+```bash
+cd backend
+npm install
+npm run dev
+```
 
-- Yes You can use IDURAR for free for personal or Commercial use.
+### Frontend
 
-## Our Sponsors
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
-  <a href="https://m.do.co/c/4ead8370b905?ref=idurarapp.com">
-    <img src="https://opensource.nyc3.cdn.digitaloceanspaces.com/attribution/assets/PoweredByDO/DO_Powered_by_Badge_blue.svg" width="201px">
-  </a>
+---
 
-#
+## 🔐 Environment Variables
 
-<img width="1403" alt="Open Source ERP CRM" src="https://github.com/idurar/idurar-erp-crm/assets/136928179/a6712286-7ca6-4822-8902-fb7523533ee8">
+### Backend (`.env`)
 
-## Free Open Source ERP / CRM App
+```
+PORT=4000
+MONGODB_URI=mongodb://localhost:27017/idurar
+JWT_SECRET=your_secret_key
+```
 
-IDURAR is Open "Fair-Code" Source ERP / CRM (Invoice / Inventory / Accounting / HR) Based on Mern Stack (Node.js / Express.js / MongoDb / React.js ) with Ant Design (AntD) and Redux
+---
 
+## 🔐 Security Highlights
 
-## Getting started
+* JWT-based authentication
+* Secure password hashing
+* Role-based authorization
+* Input validation
+* Controlled file uploads
+* CORS protection
 
-1.[Clone the repository](INSTALLATION-INSTRUCTIONS.md#step-1-clone-the-repository)
+---
 
-2.[Create Your MongoDB Account and Database Cluster](INSTALLATION-INSTRUCTIONS.md#Step-2-Create-Your-MongoDB-Account-and-Database-Cluster)
+## 📊 Database Collections (Core)
 
-3.[Edit the Environment File](INSTALLATION-INSTRUCTIONS.md#Step-3-Edit-the-Environment-File)
+* users
+* roles
+* customers
+* leads
+* invoices
+* payments
+* products
+* inventory
+* expenses
 
-4.[Update MongoDB URI](INSTALLATION-INSTRUCTIONS.md#Step-4-Update-MongoDB-URI)
+---
 
-5.[Install Backend Dependencies](INSTALLATION-INSTRUCTIONS.md#Step-5-Install-Backend-Dependencies)
+## 📈 Architecture Overview
 
-6.[Run Setup Script](INSTALLATION-INSTRUCTIONS.md#Step-6-Run-Setup-Script)
+```
+Browser
+   ↓
+Frontend (React + Vite)
+   ↓
+Backend API (Express)
+   ↓
+MongoDB (Docker)
+```
 
-7.[Run the Backend Server](INSTALLATION-INSTRUCTIONS.md#Step-7-Run-the-Backend-Server)
+## 🧭 Roadmap Ideas
 
-8.[Install Frontend Dependencies](INSTALLATION-INSTRUCTIONS.md#Step-8-Install-Frontend-Dependencies)
+* WebSocket support
+* Payment gateway integration
+* Advanced reporting
+* Audit logs
+* Multi-tenant support
 
-9.[Run the Frontend Server](INSTALLATION-INSTRUCTIONS.md#Step-9-Run-the-Frontend-Server)
+---
 
-## Contributing
+## 📜 License
 
-1.[How to contribute](https://github.com/idurar/idurar-erp-crm/blob/master/CONTRIBUTING.md#how-to-contribute)
+This project is licensed under the  **MIT License** .
 
-2.[Reporting issues](https://github.com/idurar/idurar-erp-crm/blob/master/CONTRIBUTING.md#reporting-issues)
+---
 
-3.[Working on issues ](https://github.com/idurar/idurar-erp-crm/blob/master/CONTRIBUTING.md#working-on-issues)
+## ⭐ Final Note
 
-4.[Submitting pull requests](https://github.com/idurar/idurar-erp-crm/blob/master/CONTRIBUTING.md#submitting-pull-requests)
-
-5.[Commit Guidelines](https://github.com/idurar/idurar-erp-crm/blob/master/CONTRIBUTING.md#commit-guidelines)
-
-6.[Coding Guidelines](https://github.com/idurar/idurar-erp-crm/blob/master/CONTRIBUTING.md#coding-guidelines)
-
-7.[Questions](https://github.com/idurar/idurar-erp-crm/blob/master/CONTRIBUTING.md#questions)
-
-
-## Show your support
-
-Dont forget to give a ⭐️ to this project ... Happy coding!
-
-**🚀 Self-hosted Entreprise Version** : [https://cloud.idurarapp.com](https://cloud.idurarapp.com)
-
-## License
-
-IDURAR is Free Open Source Released under the GNU Affero General Public License v3.0.
+**IDURAR ERP/CRM** is a robust, extensible foundation for building modern business management platforms.
+It is suitable for  **SMBs, SaaS products, and enterprise prototypes** .

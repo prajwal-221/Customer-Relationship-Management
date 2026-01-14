@@ -2,11 +2,11 @@
 
 **IDURAR ERP/CRM** is a modern, full-stack **Enterprise Resource Planning (ERP)** and **Customer Relationship Management (CRM)** system designed to help businesses manage finance, customers, inventory, users, and reporting from a single, unified platform.
 
-Built with a **React + Node.js + MongoDB** stack and fully containerized using  **Docker Compose** , IDURAR focuses on scalability, maintainability, and developer experience.
+Built with a **React + Node.js + MongoDB** (**MERN)** stack and fully containerized using  **Docker Compose** , IDURAR focuses on scalability, maintainability, and developer experience.
 
 ---
 
-## y Capabilities
+## Key Capabilities
 
 * End-to-end **business management**
 * Modular and extensible architecture
@@ -104,7 +104,7 @@ Built with a **React + Node.js + MongoDB** stack and fully containerized using  
 * Business and financial preferences
 * Scalable for enterprise-grade customization
 
-## Tech Stack (Verified)
+## Tech Stack
 
 ### Frontend
 

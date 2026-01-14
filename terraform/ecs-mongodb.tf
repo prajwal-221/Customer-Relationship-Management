@@ -1,15 +1,14 @@
-# MongoDB ECS Service
-
-# -------------------------------------------------------------------------------------------------
-# Task Definition
-# -------------------------------------------------------------------------------------------------
+# =================================================================================================
+# MongoDB ECS Task Definition (CRM)
+# =================================================================================================
 
 resource "aws_ecs_task_definition" "mongodb" {
-  family                   = "blinkit-${var.environment}-mongodb"
+  family                   = "CRM-${var.environment}-mongodb"
   network_mode             = "bridge"
   requires_compatibilities = ["EC2"]
-  cpu                      = "256" # Use fixed low CPU and memory to ensure fit
-  memory                   = "512" 
+
+  cpu    = "256"
+  memory = "512"
 
   execution_role_arn = aws_iam_role.ecs_execution_role.arn
   task_role_arn      = aws_iam_role.ecs_task_role.arn
@@ -17,30 +16,37 @@ resource "aws_ecs_task_definition" "mongodb" {
   container_definitions = jsonencode([
     {
       name      = "mongodb"
-      image     = "mongo:7.0"
+      image     = "mongo:6.0"
       essential = true
-      cpu       = 0
+
+      cpu               = 0
       memoryReservation = var.task_memory_reservation["mongodb"]
-      
+
       portMappings = [
         {
           containerPort = 27017
-          hostPort      = 27017 # Fixed host port for internal DNS simplicity
+          hostPort      = 27017
           protocol      = "tcp"
         }
       ]
-      
+
+      # ---------------- Mongo Init Configuration ----------------
       environment = [
         {
+          name  = "MONGO_INITDB_ROOT_USERNAME"
+          value = "root"
+        },
+        {
+          name  = "MONGO_INITDB_ROOT_PASSWORD"
+          value = "rootpassword"
+        },
+        {
           name  = "MONGO_INITDB_DATABASE"
-          value = "blinkit_clone_db"
+          value = "admin"
         }
       ]
-      
-      # No secrets for no-auth setup to matches existing app code
-      secrets = []
-      
-      # Bind mount for persistence on EC2 instance
+
+      # ---------------- Persistent Storage ----------------
       mountPoints = [
         {
           sourceVolume  = "mongodb_data"
@@ -48,35 +54,34 @@ resource "aws_ecs_task_definition" "mongodb" {
           readOnly      = false
         }
       ]
-      
+
       logConfiguration = {
         logDriver = "awslogs"
         options = {
-          "awslogs-group"         = aws_cloudwatch_log_group.ecs_service_logs.name
-          "awslogs-region"        = var.aws_region
-          "awslogs-stream-prefix" = "mongodb"
+          awslogs-group         = aws_cloudwatch_log_group.ecs_service_logs.name
+          awslogs-region        = var.aws_region
+          awslogs-stream-prefix = "mongodb"
         }
       }
     }
   ])
 
-  # Volume definition for bind mount using host path
+  # ---------------- Host Volume (EC2-backed persistence) ----------------
   volume {
     name      = "mongodb_data"
-    host_path = "/var/lib/mongo_data_blinkit"
+    host_path = "/var/lib/mongo_data_crm"
   }
 }
 
-# -------------------------------------------------------------------------------------------------
-# Service
-# -------------------------------------------------------------------------------------------------
+# =================================================================================================
+# MongoDB ECS Service (NO Load Balancer)
+# =================================================================================================
 
 resource "aws_ecs_service" "mongodb" {
-  name            = "mongodb"
+  name            = "CRM-${var.environment}-mongodb"
   cluster         = aws_ecs_cluster.main.id
   task_definition = aws_ecs_task_definition.mongodb.arn
   desired_count   = 1
-  
-  # No load balancer or service discovery for database - using manual Route53 record
-}
 
+  launch_type = "EC2"
+}

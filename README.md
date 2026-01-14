@@ -6,7 +6,7 @@ Built with a **React + Node.js + MongoDB** stack and fully containerized using  
 
 ---
 
-## Key Capabilities
+## y Capabilities
 
 * End-to-end **business management**
 * Modular and extensible architecture
@@ -16,13 +16,22 @@ Built with a **React + Node.js + MongoDB** stack and fully containerized using  
 
 ---
 
-## Screenshots
+## Screenshot
 
-![1768379484197](image/README/1768379484197.png)
+![1768388222717](image/README/1768388222717.png)
 
-![1768379613871](image/README/1768379613871.png)
+![1768388268933](image/README/1768388268933.png)
 
-## Application Features
+![1768388299790](image/README/1768388299790.png)
+
+![1768388324141](image/README/1768388324141.png)
+
+![1768388350636](image/README/1768388350636.png)
+
+![1768388377021](image/README/1768388377021.png)
+
+
+## **Application Features**
 
 ### Dashboard Overview
 

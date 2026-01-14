@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 import useLanguage from '@/locale/useLanguage';
 
@@ -37,8 +37,8 @@ const LoginPage = () => {
           className="login-form"
           initialValues={{
             remember: true,
-            email:'admin@admin.com',
-            password:'admin123',
+            email: 'admin@admin.com',
+            password: 'admin123',
           }}
           onFinish={onFinish}
         >
@@ -53,6 +53,8 @@ const LoginPage = () => {
             >
               {translate('Log in')}
             </Button>
+            {translate('Or')}{' '}
+            <Link to="/register">{translate('register now!')}</Link>
           </Form.Item>
         </Form>
       </Loading>

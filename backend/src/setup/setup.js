@@ -10,6 +10,12 @@ mongoose.connect(process.env.DATABASE);
 async function setupApp() {
   try {
     const Admin = require('../models/coreModels/Admin');
+    const adminCount = await Admin.countDocuments();
+    if (adminCount > 0) {
+      console.log('⚠️  Admin already exists. Skipping setup.');
+      process.exit();
+    }
+
     const AdminPassword = require('../models/coreModels/AdminPassword');
     const newAdminPassword = new AdminPassword();
 
@@ -71,7 +77,7 @@ async function setupApp() {
   } catch (e) {
     console.log('\n🚫 Error! The Error info is below');
     console.log(e);
-    process.exit();
+    process.exit(1);
   }
 }
 

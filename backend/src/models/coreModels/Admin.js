@@ -16,6 +16,8 @@ const adminSchema = new Schema({
     lowercase: true,
     trim: true,
     required: true,
+    unique: true,
+    index: true,
   },
   name: { type: String, required: true },
   surname: { type: String },

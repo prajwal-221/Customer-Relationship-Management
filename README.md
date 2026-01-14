@@ -218,9 +218,12 @@ npm run dev
 ### Backend (`.env`)
 
 ```
+DATABASE="mongodb://root:rootpassword@mongodb:27017/idurar?authSource=admin"
+JWT_SECRET="your_private_jwt_secret_key"
+NODE_ENV="development"
+OPENSSL_CONF='/dev/null'
+PUBLIC_SERVER_FILE="http://localhost:4000/"
 PORT=4000
-MONGODB_URI=mongodb://localhost:27017/idurar
-JWT_SECRET=your_secret_key
 ```
 
 ---
@@ -269,12 +272,6 @@ MongoDB (Docker)
 * Advanced reporting
 * Audit logs
 * Multi-tenant support
-
----
-
-## 📜 License
-
-This project is licensed under the  **MIT License** .
 
 ---
 

@@ -3,7 +3,7 @@
 # =================================================================================================
 
 resource "aws_ecs_task_definition" "frontend" {
-  family                   = "blinkit-${var.environment}-frontend"
+  family                   = "CRM-${var.environment}-frontend"
   network_mode             = "bridge"
   requires_compatibilities = ["EC2"]
 
@@ -30,8 +30,7 @@ resource "aws_ecs_task_definition" "frontend" {
         }
       ]
 
-      # VITE_BACKEND_SERVER is a BUILD-TIME ARG
-      # It must already be baked into the image
+      # React env vars are build-time only
       environment = []
 
       logConfiguration = {
@@ -51,7 +50,7 @@ resource "aws_ecs_task_definition" "frontend" {
 # =================================================================================================
 
 resource "aws_ecs_service" "frontend" {
-  name            = "blinkit-${var.environment}-frontend"
+  name            = "CRM-${var.environment}-frontend"
   cluster         = aws_ecs_cluster.main.id
   task_definition = aws_ecs_task_definition.frontend.arn
   desired_count   = 1

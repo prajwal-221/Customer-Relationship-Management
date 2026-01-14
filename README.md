@@ -6,7 +6,7 @@ Built with a **React + Node.js + MongoDB** stack and fully containerized using  
 
 ---
 
-## 🚀 Key Capabilities
+## Key Capabilities
 
 * End-to-end **business management**
 * Modular and extensible architecture
@@ -22,99 +22,80 @@ Built with a **React + Node.js + MongoDB** stack and fully containerized using  
 
 ![1768379613871](image/README/1768379613871.png)
 
-## 📌 Application Features
+## Application Features
 
-### 1️⃣ Financial Management
+### Dashboard Overview
 
-**Invoicing & Billing**
-
-* Create, edit, and delete invoices
-* Tax and discount calculation
-* Multi-currency support
-* PDF invoice generation
-* Email invoice delivery
-* Invoice status tracking
-
-**Payments**
-
-* Payment records and history
-* Partial payments
-* Payment receipts
-* Manual payment tracking (gateway-agnostic)
-
-**Expenses**
-
-* Expense categorization
-* Expense records
-* Financial summaries
+* Real-time business snapshot
+* Monthly summaries for:
+  * Invoices
+  * Quotes
+  * Paid & Unpaid amounts
+* Visual status indicators and progress tracking
+* Customer growth and activity insights
 
 ---
 
-### 2️⃣ Customer Relationship Management (CRM)
+### Customer Management
 
-* Customer profiles
-* Contact information management
-* Lead tracking
-* Sales opportunities
-* Deal pipeline
-* Quote-to-invoice workflow
-* Customer segmentation
+* Centralized customer database
+* Track active customers
+* Monitor new customers added each month
+* View customer-related invoices and quotes
+* Designed for fast lookup and relationship tracking
 
 ---
 
-### 3️⃣ Inventory & Products
+### Invoice Management
 
-* Product catalog
-* Categories and variants
-* Stock tracking
-* Inventory valuation
-* Low-stock indicators
-* Product images
-* Stock movement history
+* Create and manage invoices with ease
+* Invoice lifecycle tracking
+* Monthly invoice analytics
+* Clear separation between paid and outstanding invoices
 
 ---
 
-### 4️⃣ User & Access Management
+### Quote Management
 
-* User accounts
-* Role-Based Access Control (RBAC)
-* Permission management
-* Secure JWT authentication
-* Profile management
-* Activity protection via middleware
+* Generate professional quotes for customers
+* Quote status tracking
+* Seamless transition from quote to invoice
+* Monthly quote summaries
 
 ---
 
-### 5️⃣ Reporting & Analytics
+### Payments
 
-* Sales reports
-* Financial reports
-* Customer insights
-* Product performance analytics
-* Dashboard visualizations
-* Exportable data (PDF-ready)
+* Record and track payments
+* Associate payments with invoices
+* Support for partial payments
+* Clear visibility into payment history
 
 ---
 
-### 6️⃣ Document & File Management
+### Payment Modes
 
-* File uploads (invoices, receipts, assets)
-* Secure file storage
-* PDF generation
-* Document downloads
-
----
-
-### 7️⃣ Notifications & Integrations
-
-* Email notifications (Resend)
-* AI integrations (OpenAI)
-* External service readiness
-* REST API integration support
+* Configure multiple payment methods
+* Flexible setup for different business needs
+* Easy extension for future gateways
 
 ---
 
-## 🧱 Tech Stack (Verified)
+### Taxes
+
+* Tax configuration and management
+* Apply taxes to invoices and quotes
+* Designed for multi-tax and regional expansion
+
+---
+
+### Settings
+
+* Application-level configuration
+* Business and financial preferences
+* Scalable for enterprise-grade customization
+
+## Tech Stack (Verified)
 
 ### Frontend
 
@@ -156,7 +137,7 @@ Built with a **React + Node.js + MongoDB** stack and fully containerized using  
 
 ---
 
-## 🗂️ Project Structure
+## Project Structure
 
 ```
 .
@@ -172,7 +153,7 @@ Built with a **React + Node.js + MongoDB** stack and fully containerized using  
 
 ---
 
-## 🐳 Docker Setup (Recommended)
+## Docker Setup (Recommended)
 
 ### Prerequisites
 
@@ -193,7 +174,7 @@ docker-compose up -d --build
 
 ---
 
-## 🧪 Local Development (Without Docker)
+## Local Development (Without Docker)
 
 ### Backend
 
@@ -213,7 +194,7 @@ npm run dev
 
 ---
 
-## 🔐 Environment Variables
+## Environment Variables
 
 ### Backend (`.env`)
 
@@ -228,18 +209,16 @@ PORT=4000
 
 ---
 
-## 🔐 Security Highlights
+## Security Highlights
 
 * JWT-based authentication
 * Secure password hashing
-* Role-based authorization
 * Input validation
-* Controlled file uploads
 * CORS protection
 
 ---
 
-## 📊 Database Collections (Core)
+## 📊 Database Collections
 
 * users
 * roles
@@ -264,18 +243,3 @@ Backend API (Express)
    ↓
 MongoDB (Docker)
 ```
-
-## 🧭 Roadmap Ideas
-
-* WebSocket support
-* Payment gateway integration
-* Advanced reporting
-* Audit logs
-* Multi-tenant support
-
----
-
-## ⭐ Final Note
-
-**IDURAR ERP/CRM** is a robust, extensible foundation for building modern business management platforms.
-It is suitable for  **SMBs, SaaS products, and enterprise prototypes** .

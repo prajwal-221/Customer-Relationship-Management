@@ -7,7 +7,7 @@
     </a>
     <h1>ERP/CRM de Código Abierto y "Fair-Code" | Node.js React.js</h1>
     <p align="center">
-        <p>IDURAR ERP CRM | Fácil de usar | 44 Idiomas</p>
+        <p>IDURAR CRM | Fácil de usar | 44 Idiomas</p>
     </p>
     
   [www.idurarapp.com/open-source-erp-crm/](https://www.idurarapp.com/open-source-erp-crm/)
@@ -63,7 +63,7 @@ No, no puedes personalizar IDURAR como SaaS y ofrecerlo a otros usuarios. No se 
 
 [Ponte en contacto](mailto:hello@idurarapp.com)
 
-## Cómo Desplegar IDURAR ERP CRM :
+## Cómo Desplegar IDURAR CRM :
 
 🔥 Me gustaría invitarte a un seminario web semanal gratuito de IDURAR (curso Node.js React.js), donde aprenderás cómo desplegar IDURAR en la nube y crear una nueva API y una nueva aplicación CRUD con IDURAR en solo una hora.
 Completa este formulario si estás interesado: [https://forms.gle/qz2YZ3xQFQ77bGhS8](https://forms.gle/qz2YZ3xQFQ77bGhS8)

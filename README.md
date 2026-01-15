@@ -226,7 +226,7 @@ PORT=4000
 
 ---
 
-## 📊 Database Collections
+## Database Collections
 
 * users
 * roles
@@ -240,7 +240,7 @@ PORT=4000
 
 ---
 
-## 📈 Architecture Overview
+## Architecture Overview
 
 ```
 Browser
